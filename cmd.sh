@@ -108,9 +108,22 @@ git checkout branch
 git checkout -b <new_branch_name>
 git branch
 git branch -a
+
+If I have a branch feaure cloned in another working firectory
+git branch -d feature/teamcity_integration
+
+
+change the name of local repository:
+git branch -m "feature/new_name"
+git merge --abort
+
+
+
+
 git fetch origin
 git stash save "Stash descriptiion"
 git stash apply @{NUM} // check stash description
+git stash clear  #remove all in stash
 git merge branch_2 (step in branch1)
 git merge --no-ff branch_2 (step in branch1)
 git mergetool -t kdiff3
@@ -128,8 +141,41 @@ git push: Check  if changes in severals branches are pushed
 git push origin remote_branch: specific push
 
 
+Problems with 2fA
+https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled
+
+git remote -v
+
+Creating Acces Token
+https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+
+changing HTTPS by SSH
+git remote set-url origin git@github.com:lvc0107/bash.git
+
+
 #==================================
 git-flow
+
+
+git flow init -f 
+production -> master
+next release -> develop
+Feature branches? [feature/]
+ 
+o enter all
+
+git flow feature start playbooks
+git flow feature start update-integration-test
+#Delete local branch
+git branch -d feature/E2E-test-implementation
+git flow feature publish
+
+Pull the branch in another working directory
+git init 
+git flow feature track teamcity_integration
+git flow feature delete teamcity_integration
+git flow finish teamcity_integration
+
 
 #===================================
 grep:

@@ -10,6 +10,12 @@ Check Java installation anf JAVA_HOME variable
 
 #==================================
 bash
+
+#==================================
+BATCH
+
+ren  2015* 2016*
+
 #===================================
 building command:
 ln -s  source target
@@ -62,6 +68,54 @@ sudo su
 chmod 755 +- x +-r
 chown  user file
 
+sudo adduser intel
+sudo adduser intel sudo
+ssh-keygen -t rsa -b 4096 -v
+
+grep -rl 'output_count' ./ | xargs sed -i 's/output_count/amount_output_kvertices/g' isExpandsNkvertices.py
+grep -rl 'windows' ./ | xargs sed -i 's/windows/linux/g'
+perl -p -i -e 's/\/home\/andres\/HPC\/En_Mendieta/archivos_grads\/home\/alighezzolo\/conae/\/gcc\/gradsfiles\/meteogramas/g' *.gs
+perl -p -i -e 's/\/home\/andres\/HPC\/En_Mendieta\/archivos_grads/\/home\/alighezzolo\/conae\/gcc\/gradsfiles/g' *.gs
+perl -p -i -e 's/\/home\/alighezzolo\/conae\/gcc\/gradsfiles/\./g' *.gs
+
+perl -p -i -e 's/archivos_grads/gradsfiles/g' *.gs
+
+CHequear dejo de funcionar
+perl -p -i -e 's/wrfout_d01_[0-9]{4}-[0-9]{2}-[0-9]{2}_[0-9]{2}:[0-9]{2}:[0-9]{2}/wrfout_d01_$ENV{ACTUAL_START_DATE}/g' namelist.ARWpost
+
+md5sum  apache-cassandra-3.7-bin.tar.gz | grep  39968c48cbb2a333e525f852db59fb48
+
+sudo netstat -plnt
+
+
+
+#==================================
+CASSANDRA
+cd apache-cassandra-3.7/bin/   cd /opt/cassandra/bin (para int)
+./cqlsh 
+cqlsh> use cassandra ;
+cqlsh> drop keyspace cassandra;  case_mgmt(para int)
+cqlsh> exit
+
+
+#==================================
+Chrome
+https://user:password@URL
+
+#==================================
+CORS:
+
+    
+Access-Control-Allow-Credentials →true
+Access-Control-Allow-Origin →https://content.dev-tmp.com
+Connection →keep-alive
+Content-Length →162
+Content-Type →application/json; charset=UTF-8
+Date →Wed, 06 Jul 2016 14:23:48 GMT
+Server →nginx/1.10.1
+Vary →Origin
+Via →kong/0.8.1-Kong-Proxy-Latency →0
+X-Kong-Upstream-Latency →125
 #==================================
 curl
 
@@ -78,6 +132,17 @@ curl -X PATCH/PATH/POST/PUT -H 'authorization: Bearer ACCESS_TOKEN' \
 "https://SOME_URL" \
 | python -m json.tool | pygmentize -l json | tee users
 
+export USER=user1
+export PASS=secret
+
+
+data='
+{
+      "query":"MATCH (n) DETACH DELETE n;"
+  }'
+
+curl -u "$USER:$PASS" -b -j -k -H "Content-Type: application/json" -d "$data" $HOST:$PORT/neo4j/db/data/cypher
+
 #===================================
 Django:
 django-admin startproject apiexample
@@ -86,8 +151,10 @@ python manage.py runserver 0.0.0.0:3010
 python manage.py syncdb --all && python manage.py migrate --fake
 python manage.py syncdb && python manage.py migrate
 #==================================
-docker
-
+Docker:
+sudo usermod -aG docker $(whoami)
+docker ps
+docker exec -ti [container id] bash 
 
 
 #===================================
@@ -213,6 +280,110 @@ mvn install -Pdev -Dusername=$apigee_user -Dpassword=$apigee_pass -Dapigee.confi
 #=================================
 network manager
 
+
+#=================================
+Neo4j:
+
+
+si no muestra kvertices  borrar kookies de  (porjemplo de localhost)
+chorme->setting-> content->stetting-> all cokkies and site data ->filtrar y remove
+
+
+curl --user 'neo4j:intel123'   -H Accept:application/json -H Content-Type:application/json -v http://localhost:7474/db/data/
+
+MATCH (n) DETACH DELETE n
+
+MATCH n-[rel:INITIATED]->r 
+WHERE n.id=f16dbb74efe0686172e3616f28cb6f47 AND r.id=9a97ad3363def2b8d8603d5174006edd
+DELETE rel
+
+MATCH (N:KVertex) RETURN "KVertex",COUNT(N)
+
+
+MATCH ((kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex),(kv)-[r:INITIATED]->(ic:InvestigationCase),(r:Rule)-[a:APPLYING]->(ra:RuleApplication), (ra)<-[ir:INPUT]-(kv),
+, (ra)-[or:OUTPUT]->(kv)
+RETURN kvt.attr__name, kv.attr__name, ic.attr__name, r.attr__name, ra.attr__name 
+
+
+MATCH (n:KVertex)-[r:INITIATED]->(c:InvestigationCase) where c.id = "efdb1ddc-04f7-49d1-8f31-52d47574ae1c" return n
+
+
+query para ver cuantas reglas  se ejecutaron correctamente
+
+RULES-RULESAPPLICATION:
+MATCH (ra:RuleApplication)<-[ir:INPUT]-(iv: KVertex), (ra)<-[a:APPLYING]-(r:Rule) WHERE ra.attr__state = "completed" RETURN ra,r    
+17-30
+
+NOMBRES DE  KVERTEXTYPES NO USADOS
+MATCH (kv: KVertexType)
+where not kv<-[:LEFT_HAND]-()
+RETURN kv.attr__name
+
+
+RULESAPPLICATION BLOQUEADOS
+MATCH (ra:RuleApplication)<-[ir:INPUT]-(iv: KVertex), (ra)<-[a:APPLYING]-(r:Rule) WHERE ra.attr__state = "blocked" RETURN ra,r  
+
+
+
+RULESAPPLICATION FAILED
+MATCH (ra:RuleApplication) WHERE ra.attr__state = "failed" RETURN ra
+0
+RULESAPPLICATION COMPLETADOS
+MATCH (ra:RuleApplication) WHERE ra.attr__state = "completed" RETURN ra
+30
+
+REturn sharedfolder kvertex and its type
+$match (kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex) where kvt.attr__name="SharedFolders" return kvt,kv,i
+
+queryDNSRecord
+match (kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex) where kvt.attr__name="DnsQueryRecord" return kvt,kv,i
+
+
+UnseenSystemFiles
+match (kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex) where kvt.attr__name="UnseenSystemFiles" return kvt,kv,i
+
+match (kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex), 
+(kvt:KVertexType)<-[i:INSTANCE_OF]-(kv:KVertex)
+(kvt2:KVertexType)<-[i2:INSTANCE_OF]-(kv2:KVertex)
+where kvt.attr__name="DnsQueryRecord" and kvt2.attr__name="BadReputationIP", kvt2.attr__name="BadReputationIP" 
+return kvt, kv, i, kvt2, kv2, i2
+
+
+
+MATCH (rav:RuleApplication)<-[inr:INPUT]-(inv: KVertex), (rav)<-[apr:APPLYING]-(ruv: Rule),
+    (ruv)-[xhr:LEFT_HAND|:RIGHT_HAND]->(xhv:KVertexType)
+        OPTIONAL MATCH (rav)-[rer:RESULT]->(rev: KVertex)-[ior2:INSTANCE_OF]->(xhv)
+            WHERE ra.attr__state = "completed"
+                RETURN rav, inr, inv, apr, ruv,  rer, rev, ior2
+                    
+                    
+                MATCH (ra:RuleApplication),(r:Rule)-[lh:LEFT_HAND]->(lhv: KVertexType)
+                OPTIONAL MATCH (r)-[rh:RIGHT_HAND]->(rhv: KVertexType)
+                RETURN r, lh, lhv, rh, rhv  
+
+                MATCH (ra:RuleApplication)-[ir:RESULT]->(iv: KVertex), (ra)<-[a:APPLYING]-(r:Rule),  WHERE ra.attr__state = "completed" RETURN ra,r 
+
+
+
+                MATCH (r:Rule {id:"ITTEST_3790950"})-[lh: LEFT_HAND]->(lhv: KVertexType)
+                OPTIONAL MATCH (hub: HubKedgesType)-[hrh: HUB_RIGHT_HAND]->(rhv: KVertexType)
+                OPTIONAL MATCH (hub: HubKedgesType)-[hke: HUB_KEDGE_TYPE]->(ket: KedgeType)
+                OPTIONAL MATCH (nov: Note)-[anr:ANNOTATED]->(r)
+                RETURN r, lh, lhv, hub, hrh, rhv, hke, ket, nov, anr    
+
+data='
+{
+      "query":"MATCH (n) DETACH DELETE n;"
+  }
+  '
+curl -b -j -H "Content-Type: application/json" -d "$data" $HOST:$PORT/neo4j/db/data/cypher  
+
+o 
+rm -rf  /var/lib/neo4j/data/databases/
+
+
+#=================================
+Ngnix:
 #==================================
 npm
 wget -N http://nodejs.org/dist/node-latest.tar.gz
@@ -268,7 +439,18 @@ pip freeze
 pip install -r path/to/requirments.txt
 pip freeze | xargs pip uninstall -y
 
+pysftp:
 
+sudo apt-get install libssl-dev
+
+
+
+json.dumps(kv,indent=4, sort_keys=True))
+os.environt[] =
+subprocess.check_call
+
+parcial = functools.partial(api_utils.put_entity(context, api_path="case", entity_id=case_id))
+map(lambda x: api_utils.save_entity_in_context(context, case_identifier, case_request['links'] + x), parcial(case_request['links'] + x)), [clue for clue in clues])
 
 #==================================
 Rabbit:
@@ -283,6 +465,55 @@ sudo rabbitmqctl add_vhost /members
 sudo rabbitmqctl set_permissions -p /members members "." "." ".*"
 
 #==================================
+Redsock:
+
+REDSOCK
+
+Set proxy variables temporarily
+echo 'Acquire::http::Proxy "http://proxy-us.intel.com:911";' >> /etc/apt/apt.conf
+export HTTP_PROXY=http://proxy-us.intel.com:911
+export HTTPS_PROXY=http://proxy-us.intel.com:912
+export FTP_PROXY=http://proxy-us.intel.com:911
+export SOCKS_PROXY=http://proxy-us.intel.com:1080
+export NO_PROXY=intel.com,.intel.com,10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,134.134.0.0/16
+
+Update and install redsocks
+apt-get update && apt-get install redsocks
+
+Setup transparent proxy (you may need to make file executable with chmod +x enable_socks)
+cd <METAMORPH_RELEASE>/redsocks
+./enable_socks.sh stop
+./enable_socks.sh start
+
+ACA YA SE Puede probar
+
+Persist changes
+apt-get install iptables-persistent
+
+Copy redsocks.conf to /etc
+cp <METAMORPH_RELEASE>/redsocks/redsocks.conf /etc/redsocks.conf
+
+
+#==================================
+SBT
+
+Run project
+sbt -Dhttp.nonProxyHosts=localhost run
+Run Cassandra (Ver CASSANDRA secction)
+sbt -Dhttp.nonProxyHosts=localhost  run -DCASSANDRA_KS=cassandra
+
+Build project
+sbt stage universal:packageBin
+
+UT 
+sbt clean compile test
+coverage
+sbt clean coverage test coverageReport
+
+IT
+sbt -Dhttp.nonProxyHosts=localhost clean it:test
+
+#==================================
 Slurm:
 #==================================
 ssh
@@ -292,6 +523,39 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 clip < ~/.ssh/id_rsa.pub
 ssh -T git@github.com
+
+
+On the server side
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
+touch ~/.ssh/authorized_keys
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+ssh -i private_key.pem ubuntu@ec2-xx-xxx-xxx-xxx.us-west-2.compute.amazonaws.com
+If there is a docker image running into the ec2 instance
+ssh -i private_key.pem core@11.0.11.77
+
+
+docker ps  to show images running in component
+
+Get inside a docker machine
+docker exec -ti f56f78eecc07 bash
+
+
+Analisis dentro del componente:
+journalctl grep kube-scheduler
+journalctl -u schduler
+
+sudo service supervisor stop
+sudo services supervisor start
+
+
+
+CREATE CERTIFICATE 
+openssl req -x509 -newkey rsa:2048 -keyout 10.218.86.84.pem -out cert.pem -days XXX
+
+
 
 #==================================
 sublime:
@@ -313,7 +577,9 @@ ctrl+b+\[: search
 tmux ls: list sessions
 tmux a -t <sesionname>: Attach a session by name
 tmux new -s <sessionname>:  new session
-tmux rename <sessionname> <new_sessionname>: rename session
+tmux rename-session -t <number_session> <new_name_session>
+
+
 #===================================
 
 #===================================
@@ -362,7 +628,11 @@ chmod 755 ./VBoxLinuxAdditions.run
 #===================================
 Virtualenv:
 virtualenv -p /usr/bin/python3.6 venv                                                             │
+
+VirtualenvWrapper:
 workon
+workon venv
+deactivate
 #==================================
 vpn
 

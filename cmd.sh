@@ -97,6 +97,30 @@ cqlsh> use cassandra ;
 cqlsh> drop keyspace cassandra;  case_mgmt(para int)
 cqlsh> exit
 
+#=================================
+CORS
+No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://www.webtoolkitonline.com' is therefore not allowed access.
+
+Add this policy in apigee 
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="add-cors">
+    <DisplayName>Add CORS</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="Access-Control-Allow-Origin">{request.header.origin}</Header>
+            <Header name="Access-Control-Allow-Headers">origin, x-requested-with, accept, content-type</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
 
 #==================================
 Chrome
@@ -165,6 +189,7 @@ git config --global user.email miguelmnr@gmail.com
 git mergetool -t kdiff3
 git clean -i
 git config --global alias.tree 'log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
+gt log --oneline --decorate --all --graph
 git tree
 git show <commit_id>
 git log
@@ -249,6 +274,26 @@ grep --color=auto -r  "word" .
 #==================================
 iptables:
 
+#==================================
+JAVASCRIPT
+POST
+var data = { "data": "2" };
+
+$.ajax({
+    type: "POST",
+    url: "http://natgeo-preprod-dev.apigee.net/tenantselector",
+    data: JSON.stringify({"hola": "que tal"}),
+    contentType: "application/json",
+    crossDomain : true,
+    dataType: "json",
+    success: function(data){alert(data);},
+    failure: function(errMsg) {
+        alert("ERROR");
+    }
+});
+
+TESTING
+http://www.webtoolkitonline.com/javascript-tester.html
 #==================================
 Linux:
 uname -a

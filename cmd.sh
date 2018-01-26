@@ -97,6 +97,30 @@ cqlsh> use cassandra ;
 cqlsh> drop keyspace cassandra;  case_mgmt(para int)
 cqlsh> exit
 
+#=================================
+CORS
+No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://www.webtoolkitonline.com' is therefore not allowed access.
+
+Add this policy in apigee 
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="add-cors">
+    <DisplayName>Add CORS</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="Access-Control-Allow-Origin">{request.header.origin}</Header>
+            <Header name="Access-Control-Allow-Headers">origin, x-requested-with, accept, content-type</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
 
 #==================================
 Chrome
@@ -169,7 +193,7 @@ git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.
 git mergetool -t kdiff3
 
 git clean -i
-it show <commit_id>
+git show <commit_id>
 git log
 git diff
 git mv file1 file2
@@ -261,6 +285,26 @@ grep --color=auto -r  "word" .
 #==================================
 iptables:
 
+#==================================
+JAVASCRIPT
+POST
+var data = { "data": "2" };
+
+$.ajax({
+    type: "POST",
+    url: "http://natgeo-preprod-dev.apigee.net/tenantselector",
+    data: JSON.stringify({"hola": "que tal"}),
+    contentType: "application/json",
+    crossDomain : true,
+    dataType: "json",
+    success: function(data){alert(data);},
+    failure: function(errMsg) {
+        alert("ERROR");
+    }
+});
+
+TESTING
+http://www.webtoolkitonline.com/javascript-tester.html
 #==================================
 Linux:
 uname -a
@@ -411,13 +455,40 @@ wt logs -p "natgeo-test-default-logs"
 openssl
 
 
-#===================================
+#==================================
 Postgres:
-postgres createuser -P db_user;
-sudo -u postgres createuser -P db_user;
-sudo -u postgres createdb mmdb -O db_user;
+postgres createuser -P <db_user>;
+sudo -u postgres createuser -P <db_user>;
+sudo -u postgres createdb <db_name> -O <db_user>;
+sudo -u postgres dropdb <db_nbame>	
 service postgresql  status/start/restart/stop
 psql --version
+
+AUTHENTICATION in psql
+sudo -u postgres psql
+could not change directory to "/home/luis.vargasb": Permission denied
+Password:
+psql: FATAL:  password authentication failed for user "postgres"
+
+Fix:
+sudo vim /etc/postgresql/9.5/main/pg_hba.conf
+Add the first line:
+local   all         postgres                          peer
+
+service postgresql restart
+Check:
+https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres
+
+PSQL interpreter
+sudo -u postgres psql
+
+\? list all the commands.
+\l list databases.
+\conninfo display information about current connection.
+\c [DBNAME] connect to new database, e.g., \c template1.
+\dt list tables.
+\q quit psql.
+
 
 dropdb db
 psql -U db_user -c "drop database db"
@@ -461,6 +532,28 @@ subprocess.check_call
 
 parcial = functools.partial(api_utils.put_entity(context, api_path="case", entity_id=case_id))
 map(lambda x: api_utils.save_entity_in_context(context, case_identifier, case_request['links'] + x), parcial(case_request['links'] + x)), [clue for clue in clues])
+
+
+python
+
+fatal error: Python.h: No such file or directory 	(Using  python3  in virtualenv)
+Fix https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory
+
+	
+Looks like you haven't properly installed the header files and static libraries for python dev. Use your package manager to install them system-wide.
+
+For apt (Ubuntu, Debian...):
+
+sudo apt-get install python-dev   # for python2.x installs
+sudo apt-get install python3-dev  # for python3.x installs
+For yum (CentOS, RHEL...):
+
+sudo yum install python-devel
+For dnf (Fedora...):
+
+sudo dnf install python2-devel  # for python2.x installs
+sudo dnf install python3-devel  # for python3.x installs
+
 
 #==================================
 Rabbit:
@@ -576,6 +669,32 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
+install anaconda,git agila
+
+{
+	"auto_indent": true,
+	"draw_white_space": "all",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		79
+	],
+	"smart_indent": true,
+	"tab_size": 4,
+	"theme": "Agila.sublime-theme",
+	"trim_automatic_white_space": true,
+	"use_tab_stops": true,
+	"vintage_start_in_command_mode": true,
+	"word_wrap": true,
+	"wrap_width": 80,
+	"save_on_focus_lost" :true
+}
+
+
 #=================================
 tmux
 ctrl+b up/down: Move between panels
@@ -584,6 +703,8 @@ ctrl+b+\": new horizontal panel
 ctrl+b+%: new vertical panel
 ctrl+b+d: detach
 ctrl+b+\[: search
+ctrl+b+\$: rename session
+ctrl+b+\:: new session
 tmux ls: list sessions
 tmux a -t <sesionname>: Attach a session by name
 tmux new -s <sessionname>:  new session
@@ -643,8 +764,9 @@ Virtualenv:
 virtualenv -p /usr/bin/python3.6 venv                                                             │
 
 VirtualenvWrapper:
+mkvirtualenv venv_name
 workon
-workon venv
+workon venv_name
 deactivate
 #==================================
 vpn
@@ -654,6 +776,10 @@ openvpn --version
 vim  ~/.cisco/csd-wrapper.sh
 openconnect vpn.ngeo.com --csd-wrapper=/root/.cisco/csd-wrapper.sh
 
+
+
+comparar  contra yopmail
+https://10minutemail.com/10MinuteMail/index.html?dswid=7296
 
 
 

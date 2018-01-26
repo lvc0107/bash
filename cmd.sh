@@ -162,11 +162,14 @@ git:
 
 git config --global user.name "Migue"
 git config --global user.email miguelmnr@gmail.com
-git mergetool -t kdiff3
-git clean -i
 git config --global alias.tree 'log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
+git config --global alias.tree 'log --graph --full-history --all --color --date=short'
 git tree
-git show <commit_id>
+git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git mergetool -t kdiff3
+
+git clean -i
+it show <commit_id>
 git log
 git diff
 git mv file1 file2
@@ -185,8 +188,6 @@ git branch -m "feature/new_name"
 git merge --abort
 
 
-
-
 git fetch origin
 git stash save "Stash descriptiion"
 git stash apply @{NUM} // check stash description
@@ -197,8 +198,17 @@ git mergetool -t kdiff3
 TODO study
 git revert
 git cherry-pick
-git rebase --continue
-git rebase --abort
+git rebase:
+	git checkout branch
+	git rebase master
+	git mergetool -t kidff3 #if conflict
+		git add <file>
+		git rebase --continue
+		git checkout master
+		git merge branch
+	git rm <file>
+	git rebase --abort
+		
 git reset 123455666:  this commit is the upper  after reseting : The reseted commits remains as local changes
 
 git reset --hard 123454545 : WARNING: dengeraus operation. All reseted commits are erased
@@ -624,6 +634,9 @@ apt-get dist-upgrade -y
 apt-get install linux-headers-$(uname -r)
 chmod 755 ./VBoxLinuxAdditions.run
 ./VBoxLinuxAdditions.run
+Si no funciona
+update source.list 
+apt-get update
 
 #===================================
 Virtualenv:

@@ -178,9 +178,16 @@ python manage.py syncdb && python manage.py migrate
 Docker:
 sudo usermod -aG docker $(whoami)
 docker ps
-docker exec -ti [container id] bash 
 
-
+docker build -t flask-sample-one:latest .
+docker ps -a
+docker run  flask-sample-one
+docker exec -ti [container id] bash
+docker login
+docker image
+docker tag db09fc61f62f lvc0107/flask-sample-one:firsttry
+docker push <user-name>/<image-name>
+docker push lvc0107/flask-sample-one
 #===================================
 git:
 
@@ -190,6 +197,7 @@ git config --global alias.tree 'log --graph --full-history --all --color --date=
 git config --global alias.tree 'log --graph --full-history --all --color --date=short'
 git tree
 git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add mergetool.kdiff3.path "/usr/bin/kdiff3"
 git mergetool -t kdiff3
 
 git clean -i
@@ -725,6 +733,7 @@ sudo apt-get install tmux
 sudo apt-get install postgresql
 sudo apt-get install ipython
 sudo apt-get install xclip
+sudo apt-get install virtualenvwrapper
 
 #==================================
 vim

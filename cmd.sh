@@ -750,14 +750,17 @@ set tab (COMPLETE)
 #===================================
 VirtualBox:
 
-apt-get upgrade -y
-apt-get dist-upgrade -y
-apt-get install linux-headers-$(uname -r)
-chmod 755 ./VBoxLinuxAdditions.run
-./VBoxLinuxAdditions.run
-Si no funciona
-update source.list 
-apt-get update
+
+https://unix.stackexchange.com/questions/405862/headers-for-4-12-0-kali1-amd64-or-location-of-kali-4-13-installer
+
+apt-cache search linux-image
+apt-cache search linux-headers
+Ejemplo  para version 4.14
+apt-get install linux-image-4.14.0-kali3-amd64 
+apt-cache search linux-headers
+apt-get install linux-headers-4.14.0-kali3-amd64 
+reboot
+
 
 #===================================
 Virtualenv:

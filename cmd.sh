@@ -203,19 +203,29 @@ python setup.py  test
 Docker:
 sudo usermod -aG docker $(whoami)
 docker ps
-docker exec -ti [container id] bash 
 
-
+docker build -t flask-sample-one:latest .
+docker ps -a
+docker run  flask-sample-one
+docker exec -ti [container id] bash
+docker login
+docker image
+docker tag db09fc61f62f lvc0107/flask-sample-one:firsttry
+docker push <user-name>/<image-name>
+docker push lvc0107/flask-sample-one
 #===================================
 git:
 
 git config --global user.name "Migue"
 git config --global user.email miguelmnr@gmail.com
-git mergetool -t kdiff3
-git clean -i
 git config --global alias.tree 'log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
-gt log --oneline --decorate --all --graph
+git config --global alias.tree 'log --graph --full-history --all --color --date=short'
 git tree
+git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add mergetool.kdiff3.path "/usr/bin/kdiff3"
+git mergetool -t kdiff3
+
+git clean -i
 git show <commit_id>
 git log
 git diff
@@ -245,8 +255,17 @@ git mergetool -t kdiff3
 TODO study
 git revert
 git cherry-pick
-git rebase --continue
-git rebase --abort
+git rebase:
+	git checkout branch
+	git rebase master
+	git mergetool -t kidff3 #if conflict
+		git add <file>
+		git rebase --continue
+		git checkout master
+		git merge branch
+	git rm <file>
+	git rebase --abort
+		
 git reset 123455666:  this commit is the upper  after reseting : The reseted commits remains as local changes
 
 git reset --hard 123454545 : WARNING: dengeraus operation. All reseted commits are erased
@@ -740,6 +759,7 @@ sudo apt-get install tmux
 sudo apt-get install postgresql
 sudo apt-get install ipython
 sudo apt-get install xclip
+sudo apt-get install virtualenvwrapper
 
 #==================================
 vim
@@ -765,11 +785,17 @@ set tab (COMPLETE)
 #===================================
 VirtualBox:
 
-apt-get upgrade -y
-apt-get dist-upgrade -y
-apt-get install linux-headers-$(uname -r)
-chmod 755 ./VBoxLinuxAdditions.run
-./VBoxLinuxAdditions.run
+
+https://unix.stackexchange.com/questions/405862/headers-for-4-12-0-kali1-amd64-or-location-of-kali-4-13-installer
+
+apt-cache search linux-image
+apt-cache search linux-headers
+Ejemplo  para version 4.14
+apt-get install linux-image-4.14.0-kali3-amd64 
+apt-cache search linux-headers
+apt-get install linux-headers-4.14.0-kali3-amd64 
+reboot
+
 
 #===================================
 Virtualenv:

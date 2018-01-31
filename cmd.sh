@@ -88,6 +88,9 @@ md5sum  apache-cassandra-3.7-bin.tar.gz | grep  39968c48cbb2a333e525f852db59fb48
 sudo netstat -plnt
 
 
+grep -rl "Spluk" * -R | xargs sed -i 's/Spluk/Splunk/g'
+grep Spluk -r .
+
 
 #==================================
 CASSANDRA
@@ -174,6 +177,28 @@ python manage.py migrate
 python manage.py runserver 0.0.0.0:3010
 python manage.py syncdb --all && python manage.py migrate --fake
 python manage.py syncdb && python manage.py migrate
+
+
+cd NG/django-project/
+mkvirtualenv djangovenv
+pip  install -r requirements.txt 
+sudo apt-get install sqlite
+django-admin startproject sample-auth
+cd sample_auth/sample_auth/
+vim settings.py 
+vim urls.py 
+pip install -e git+git@github.com:natgeo/django-api-auth.git@master#egg=api_auth
+cd ..
+python manage.py migrate
+python manage.py runserver
+python manage.py createsuperuser
+cd ..
+python setup.py install
+python setup.py  test
+
+
+
+
 #==================================
 Docker:
 sudo usermod -aG docker $(whoami)
@@ -276,21 +301,22 @@ iptables:
 
 #==================================
 JAVASCRIPT
-POST
-var data = { "data": "2" };
+POST (Works fine multitenant V32 apigee)
+
+var username = "test420@yopmail.com";
+var data = {"username": username, "tenantId": "US"};
 
 $.ajax({
     type: "POST",
-    url: "http://natgeo-preprod-dev.apigee.net/tenantselector",
-    data: JSON.stringify({"hola": "que tal"}),
+    url: "http://URLr",
+    data: JSON.stringify(data),
     contentType: "application/json",
     crossDomain : true,
     dataType: "json",
-    success: function(data){alert(data);},
-    failure: function(errMsg) {
-        alert("ERROR");
-    }
+    success: function(){alert("11111");},
+    failure: function() {alert("2222");}
 });
+
 
 TESTING
 http://www.webtoolkitonline.com/javascript-tester.html
@@ -562,12 +588,12 @@ Redsock:
 REDSOCK
 
 Set proxy variables temporarily
-echo 'Acquire::http::Proxy "http://proxy-us.intel.com:911";' >> /etc/apt/apt.conf
-export HTTP_PROXY=http://proxy-us.intel.com:911
-export HTTPS_PROXY=http://proxy-us.intel.com:912
-export FTP_PROXY=http://proxy-us.intel.com:911
-export SOCKS_PROXY=http://proxy-us.intel.com:1080
-export NO_PROXY=intel.com,.intel.com,10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,134.134.0.0/16
+echo 'Acquire::http::Proxy "http://proxy-.com:911";' >> /etc/apt/apt.conf
+export HTTP_PROXY=http://proxy-com:911
+export HTTPS_PROXY=http://proxy.com:912
+export FTP_PROXY=http://proxy-u.com:911
+export SOCKS_PROXY=http://proxy.com:1080
+export NO_PROXY=bla bla
 
 Update and install redsocks
 apt-get update && apt-get install redsocks

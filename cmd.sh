@@ -473,17 +473,10 @@ rm -rf  /var/lib/neo4j/data/databases/
 #=================================
 Ngnix:
 #==================================
-npm
-wget -N http://nodejs.org/dist/node-latest.tar.gz
-tar xzvf node-latest.tar.gz && cd node-v*
-./configure
-sudo fakeroot checkinstall -y --install=no --pkgversion $(echo $(pwd) | sed -n -re's/.+node-v(.+)$/\1/p') make -j$(($(nproc)+1)) install
-sudo dpkg -i node_*
-node  -v
-npm install json
-npm install -g wt-cli
-wt init --container "test" --url "https://sandbox.it.auth0.com" --token "ACCESS_TOKEN"
-wt logs -p "natgeo-test-default-logs"
+npm 
+Install binaries from:
+https://nodejs.org/en/download/current/
+
 
 #==================================
 openssl

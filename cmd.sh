@@ -189,7 +189,20 @@ vim settings.py
 vim urls.py 
 pip install -e git+git@github.com:natgeo/django-api-auth.git@master#egg=api_auth
 cd ..
-python manage.py migrate
+
+python manage.py makemigrations app_name --name "some_change"
+python manaeg.py sql_migrate
+python manage.py migrate app_name
+python manage.py show.migrations
+python manage.py shell
+   1)  from mny App.model  import  my_model
+   2)  my_model.objects.all()
+   3)  a = my_model.objects.all()[333]
+   4)  a.email
+
+
+
+
 python manage.py runserver
 python manage.py createsuperuser
 cd ..
@@ -500,7 +513,11 @@ psql: FATAL:  password authentication failed for user "postgres"
 Fix:
 sudo vim /etc/postgresql/9.5/main/pg_hba.conf
 Add the first line:
-local   all         postgres                          peer
+local   all             postgres                          peer
+
+or 
+local   all             postgres                          trust
+
 
 service postgresql restart
 Check:

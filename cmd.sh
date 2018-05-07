@@ -179,7 +179,6 @@ python manage.py syncdb --all && python manage.py migrate --fake
 python manage.py syncdb && python manage.py migrate
 
 
-cd NG/django-project/
 mkvirtualenv djangovenv
 pip  install -r requirements.txt 
 sudo apt-get install sqlite
@@ -187,7 +186,6 @@ django-admin startproject sample-auth
 cd sample_auth/sample_auth/
 vim settings.py 
 vim urls.py 
-pip install -e git+git@github.com:natgeo/django-api-auth.git@master#egg=api_auth
 cd ..
 
 python manage.py makemigrations app_name --name "some_change"

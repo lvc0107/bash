@@ -1,0 +1,173 @@
+
+====================================================================================
+POSTGRES MAC
+
+
+brew services start/stop/restart postgres   
+
+
+sudo -u luisvargas createuser -P DATABASE_NAME;  
+Enter password for new role: 
+Enter it again: 
+➜ sudo -u luisvargas createdb DATABASE_NAME -O DATABASE_NAME; 
+➜ sudo psql -U luisvargas postgres          
+postgres=# create database DATABASE_NAME;
+CREATE DATABASE
+postgres=# ALTER DATABASE DATABASE_NAME OWNER TO DATABASE_NAME;
+ALTER DATABASE
+postgres=# ALTER USER DATABASE_NAME WITH SUPERUSER;
+ALTER ROLE
+postgres=# 
+
+
+
+CREATE models in DB
+python manage.py syncdb --all && python manage.py migrate --fake
+
+POPULATE database
+
+
+
+
+Password:
+psql (10.4)
+Type "help" for help.
+
+postgres=# \du
+                                    List of roles
+ Role name  |                         Attributes                         | Member of 
+------------+------------------------------------------------------------+-----------
+ luisvargas | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+ DATABASE_NAME       |                                                            | {}
+ postgres   | Superuser                                                  | {}
+ profiles   | Superuser, Create role, Create DB                          | {}
+
+postgres=# \l
+                                     List of databases
+   Name    |   Owner    | Encoding |   Collate   |    Ctype    |     Access privileges     
+-----------+------------+----------+-------------+-------------+---------------------------
+ DATABASE_NAME      | DATABASE_NAME       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ profiles  | profiles   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+ template1 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+(5 rows)
+
+postgres=# ALTER USER
+USER              USER MAPPING FOR  
+postgres=# ALTER USER DATABASE_NAME WITH SUPERUSER;
+ALTER ROLE
+postgres=# \l
+                                     List of databases
+   Name    |   Owner    | Encoding |   Collate   |    Ctype    |     Access privileges     
+-----------+------------+----------+-------------+-------------+---------------------------
+ DATABASE_NAME      | DATABASE_NAME       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ profiles  | profiles   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+ template1 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+(5 rows)
+
+postgres=# \du
+                                    List of roles
+ Role name  |                         Attributes                         | Member of 
+------------+------------------------------------------------------------+-----------
+ luisvargas | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+ DATABASE_NAME       | Superuser                                                  | {}
+ postgres   | Superuser                                                  | {}
+ profiles   | Superuser, Create role, Create DB                          | {}
+
+postgres=# 
+
+
+DELETE DATABASE
+
+postgres=# drop database DATABASE_NAME;
+ERROR:  database "DATABASE_NAME" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+FIX: stop pgAdmin
+
+
+
+
+
+====================================================================================
+POSTGRES LINUX
+
+
+DELETE DATABASE
+
+/NG/DATABASE_NAME(venv3957) (feature/NGPAPI-3834*)$ sudo su  postgres
+psql
+postgres=# drop database DATABASE_NAME;
+
+
+
+
+
+
+sudo -u luisvargas createuser -P DATABASE_NAME;  
+Enter password for new role: 
+Enter it again: 
+(DATABASE_NAME) DATABASE_NAME  (feature/ST-4017) ✗  
+➜ sudo -u luisvargas createdb DATABASE_NAME -O DATABASE_NAME; 
+(DATABASE_NAME) DATABASE_NAME  (feature/ST-4017) ✗  
+➜ sudo psql -U luisvargas postgres          
+
+Password:
+psql (10.4)
+Type "help" for help.
+
+postgres=# \du
+                                    List of roles
+ Role name  |                         Attributes                         | Member of 
+------------+------------------------------------------------------------+-----------
+ luisvargas | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+ DATABASE_NAME       |                                                            | {}
+ postgres   | Superuser                                                  | {}
+ profiles   | Superuser, Create role, Create DB                          | {}
+
+postgres=# \l
+                                     List of databases
+   Name    |   Owner    | Encoding |   Collate   |    Ctype    |     Access privileges     
+-----------+------------+----------+-------------+-------------+---------------------------
+ DATABASE_NAME      | DATABASE_NAME       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ profiles  | profiles   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+ template1 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+(5 rows)
+
+postgres=# ALTER USER
+USER              USER MAPPING FOR  
+postgres=# ALTER USER DATABASE_NAME WITH SUPERUSER;
+ALTER ROLE
+postgres=# \l
+                                     List of databases
+   Name    |   Owner    | Encoding |   Collate   |    Ctype    |     Access privileges     
+-----------+------------+----------+-------------+-------------+---------------------------
+ DATABASE_NAME      | DATABASE_NAME       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ profiles  | profiles   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+ template1 | luisvargas | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/luisvargas            +
+           |            |          |             |             | luisvargas=CTc/luisvargas
+(5 rows)
+
+postgres=# \du
+                                    List of roles
+ Role name  |                         Attributes                         | Member of 
+------------+------------------------------------------------------------+-----------
+ luisvargas | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+ DATABASE_NAME       | Superuser                                                  | {}
+ postgres   | Superuser                                                  | {}
+ profiles   | Superuser, Create role, Create DB                          | {}
+
+postgres=# 

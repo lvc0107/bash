@@ -297,6 +297,10 @@ https://help.github.com/articles/creating-a-personal-access-token-for-the-comman
 changing HTTPS by SSH
 git remote set-url origin git@github.com:lvc0107/bash.git
 
+git branch  -vv
+git branch --unset-upstream
+git remote add origin git@github.com:natgeo/profile-service.git
+
 
 #==================================
 git-flow

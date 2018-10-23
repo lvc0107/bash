@@ -1,0 +1,30 @@
+<html> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+ </head>
+ <body>
+  <form action="https://s3.amazonaws.com/profile-avatars-dev/" method="post" enctype="multipart/form-data"> 
+   POLICY
+   <input type="input" name="policy" value=""/>     
+   <br /> 
+   <br /> 
+   AWS ACCESS ID 
+   <input type="input" name="AWSAccessKeyId" value="" />    
+   <br /> 
+   <br /> 
+   SINAGTURE
+   <input type="input" name="Signature" value="" />     
+   <br /> 
+   <br /> 
+   Key to upload: 
+   <input type="input" name="key" value="" />
+   <br /> 
+   <br /> 
+  File:      
+   <input type="file"   name="file" />
+   <br />     <!-- The elements after this will be ignored -->     
+   <br /> 
+   <input type="submit" name="submit" value="Upload to Amazon S3" />      
+  </form>    
+ </body>
+</html> 

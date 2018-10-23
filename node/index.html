@@ -1,0 +1,49 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+// Remember to include jQuery somewhere.
+// Remember to include jQuery somewhere.
+$(document).ready(function(){
+prisigned_url='https://profile-avatars-dev.s3-accelerate.amazonaws.com/111111.jpg?AWSAccessKeyId=AKIAIYMMB4WYPGD7IOQQ&Content-Type=text%2Fcsv&Expires=1539206457&Signature=QI8EBgMcUzlxU4Bv5I%2FFI3sddEo%3D&x-amz-acl=bucket-owner-full-control';
+    $(function() {
+      $('#theForm').on('submit', sendFile);
+    });
+    function sendFile(e) {
+        e.preventDefault();
+        // get the reference to the actual file in the input
+        var theFormFile = $('#theFile').get()[0].files[0];
+        $.ajax({
+          type: 'PUT',
+          url:prisigned_url, //server will send presigned url to upload image expires in 3600
+          // Content type must much with the parameter you signed your URL with
+          //contentType: 'binary/octet-stream',
+          // this flag is important, if not set, it will try to send data as a form
+          //ContentType: 'image/jpg',
+          processData: false,
+          // the actual file is sent raw
+          data: theFormFile
+        })
+        .success(function(file,response) {
+            console.log("file=>",file);
+            console.log("response=>",response);
+          alert('File uploaded');
+        })
+        
+        .error(function() {
+          alert('File NOT uploaded');
+          console.log( arguments);
+        });
+        return false;
+  
+      }
+});
+</script>
+</head>
+<body>
+<form id="theForm" method="POST" enctype="multipart/form-data" >
+    <input id="theFile" name="file" type="file"/> 
+    <button id="theButton" type="submit">send 1</button>
+</form>
+</body>
+</html>

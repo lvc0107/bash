@@ -5,18 +5,23 @@ POSTGRES MAC
 
 brew services start/stop/restart postgres   
 
-
+#### CREATE DATABASE 1
 sudo -u luisvargas createuser -P DATABASE_NAME;  
 Enter password for new role: 
 Enter it again: 
-➜ sudo -u luisvargas createdb DATABASE_NAME -O DATABASE_NAME; 
-➜ sudo psql -U luisvargas postgres          
+sudo -u luisvargas createdb DATABASE_NAME -O DATABASE_OWNER; 
+
+
+#### CREATE DATABASE 2
+sudo psql -U luisvargas postgres          
 postgres=# create database DATABASE_NAME;
 CREATE DATABASE
-postgres=# ALTER DATABASE DATABASE_NAME OWNER TO DATABASE_NAME;
-ALTER DATABASE
-postgres=# ALTER USER DATABASE_NAME WITH SUPERUSER;
+postgres=# create ROLE ROLE_NAME;
+CREATE ROLE
+postgres=# ALTER USER DATABASE_OWNER WITH SUPERUSER;
 ALTER ROLE
+ppostgres=# ALTER DATABASE DATABASE_NAME OWNER TO DATABASE_OWNER;
+ALTER DATABASE
 postgres=# 
 
 

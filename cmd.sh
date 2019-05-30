@@ -224,6 +224,27 @@ docker image
 docker tag db09fc61f62f lvc0107/flask-sample-one:firsttry
 docker push <user-name>/<image-name>
 docker push lvc0107/flask-sample-one
+
+
+
+Create new container from existing one 
+
+
+docker images -> Get  image_repository/image_tag
+docker ps -a -> Get docker_id/docker_name
+
+docker docker run -it --entrypoint /bin/bash image_repository -s
+Make changes
+docker commit --message 'xxx'  docker_name/is new_image_respository:image_tag
+docker stop docker_name
+docker rm docker_name
+docker rmi image_repository:image_tag
+
+docker docker run --name new_container_name -d -p 8787:8787 new_image_respository:image_tag
+OPTIONAL
+docker push
+
+
 #===================================
 git:
 
@@ -374,6 +395,10 @@ debian:
 
 dpkg -l | less
 dpgk -i package
+
+BUSCAR y DELETE
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
 #==================================
 mysql
 #===================================

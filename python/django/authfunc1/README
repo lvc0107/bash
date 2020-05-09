@@ -1,0 +1,17 @@
+Virtualenv + Django basic settings:
+cd bash/python/django/
+mkvirtualenv --python=/usr/local/bin/python3 authfunc1
+django-admin startproject authfunc1
+python manage.py startapp auth
+touch requirements.txt
+  Django==2.1.5
+  psycopg2==2.7.5
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+Docker:
+vim Dockerfile
+docker build --tag=auth1 .
+docker run -p 8000:8000 auth1

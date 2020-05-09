@@ -250,7 +250,8 @@ git:
 
 git config --global user.name "Migue"
 git config --global user.email miguelmnr@gmail.com
-git config --global alias.tree 'log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
+git config --global alias.tree 'log --graph --full-history --all --color --date=short --pretty=format:"%Cred%x09%h %Creset%a
+d%Cblue%d %Creset %s %C(bold)(%an)%Creset"'
 git config --global alias.tree 'log --graph --full-history --all --color --date=short'
 git tree
 git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"

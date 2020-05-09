@@ -1,0 +1,48 @@
+1) incorectas las 3 
+Respuesta correcta:  
+
+SELECT d.name FROM department d JOIN employer e ON e.dep_id = d.dep_id group by d.dep_id, d.name HAVING COUNT(e.id) > 10;
+
+# Version un poco mas descriptiva
+SELECT d.name, d.dep_id, count(e.id) as amount_employer FROM department d JOIN employer e ON e.dep_id = d.dep_id group by d.dep_id, d.name HAVING COUNT(e.id) > 10;
+
+Explicacion: La respuesta a) es la que mejor se aproxima a la respuesta correcta pero falta cumplir la restriccion que groupy by pide  de agrupar por todos los campos referenciados en la clausula SELECT. Es decir tambien debemos referenciar a d.name en la clausula GROUP BY, pues es pedida en SELECT.
+
+
+2) Las 3 son correctas
+Tanto a) como c) son busquedas siguiendo un path absoluto, una vez que se encontro el nodo es posible buscar todos los subnodos consultando por un atributo del nodo ecnontrando (En este caso track)
+O sino es posible buscando por un nodo hermano que cumpla una condicion.
+
+/collection/album/track[@id=123] Selecciona todos los elementos 'tracks' que tiene el atributo id =123 (uno solo en este caso)
+Luego 
+/collection/album/tracks[@id=123]/title  Selecciona al unico nodo 'title' que es hijo nodo 'track' encontrado.
+
+
+/collection/album/track[artist="U2"] Selecciona todos los nodos 'track' que tienen como hijos a nodos 'artist' con el valor U2 (uno solo en este caso)
+Luego 
+/collection/album/track[artist="U2"]/title selecciona al unico nodo hijo 'title' del nodo 'track' encontrado. 
+
+El caso b) es una busqueda con un path relativo. Cualquier nodo 'track' (No importa donde este ubicado) que cumpla la condicion de su atributo es la base para buscar a sus nodos hijos 'title'. Segun el XML dado devuelve el mismo nodo 'title' que las buquedas siguiendo un path absoluto.
+
+
+3)
+a) SELECT * FROM tracks WHERE duration >= 300 and title LIKE 'A%'; 
+b) SELECT t.name, t.weight FROM Tags_tracks tt JOIN tags t ON t.id = tt.tag_id and tt.track_id = 1234 ORDER BY t.weight DESC; 
+c) SELECT title FROM tracks LEFT OUTER JOIN Tags_tracks ON tracks.id = Tags_tracks.track_id WHERE Tags_tracks.tag_id is NULL;
+
+
+4) Parado en el directorio en el que deseo aplicar la busqueda
+ grep -r "Bob Marley" . | grep tsv | wc  | awk '{ print $1 }'
+
+Explicacion : 
+a) Aplico busqueda recursiva del string deseado poscionado en el directorio actual.
+b) El Stdout del comando anterior muestra todas las ocurrencias del string deseado y ademas el archivo donde aparecio. Redirigo su STDOUT usando un pipe. Luego aplico un nuevo filtro para buscar solamente las ocurrencias en archivos con extension .tsv (pueden haber. varias ocurrencias del string en el mismo archivo). (nuevo uso de pipe)
+c) Con el comando wc (word count) cuento la cantidad de lineas obtenidas en el comando anterior.
+d) Finalmente filtro la primer columna obtenida del pipe anterior, que es la que informa el numero de lineas (o de referencias) en las que aparece el string buscado.
+
+5) Usando las librerias sugeridas, basicamente el proceso a seguir es:
+  a) Cargar el xml en memoria. Uso un context manger a efectos de asegurar el cerrado del file.
+  b) parsear los datos
+  c) volcar los datos en nuevo formato xml
+
+6) Se agregaron las validaciones requeridas.

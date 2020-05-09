@@ -57,13 +57,13 @@ if __name__ == '__main__':
         "client_id": os.environ["CLIENT_ID"]
     }
 
-    print "USER PAYLOAD:"
+    print("USER PAYLOAD:")
     formatted_json = json.dumps(user_payload, indent=4, sort_keys=True)
-    print highlight(formatted_json, lexers.JsonLexer(), formatters.TerminalFormatter())
+    print(highlight(formatted_json, lexers.JsonLexer(), formatters.TerminalFormatter()))
 
     res = requests.patch(user_url, data=json.dumps(
         user_payload), headers=headers)
-    print "RESPONSE:"
+    print("RESPONSE:")
     formatted_json = json.dumps(res.json(), indent=4, sort_keys=True)
-    print highlight(formatted_json, lexers.JsonLexer(), formatters.TerminalFormatter())
+    print(highlight(formatted_json, lexers.JsonLexer(), formatters.TerminalFormatter()))
     res.raise_for_status()

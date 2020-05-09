@@ -1,0 +1,1017 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ingestion dateCreated="2018-12-09T11:27:17.616866" name="customer name">
+    <tracks>
+        <track id="track_id">
+        <title>Muleta de borracho</title>
+        <fingerprint_uri />
+        <audio_uri>daniel_melingo/santa_milonga/Track_7.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00048</ISRC>
+        <artists>
+            <artist>Daniel Melingo</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Santa Milonga</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>VILLANCICO DEL HORROR</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_1.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00013</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>CASITAS INUNDADAS A VOTAR</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_2.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00014</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>COMO UN CUENTO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_3.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00015</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>QUE VES?</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_4.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00016</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>GÁRGARA LARGA</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_5.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00017</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>SPAGUETTI DEL ROCK</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_6.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00018</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>INTRO ORTEGA Y GASES - ANDÁ A LAVARTELOS - NIÑO HEREJE</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_7.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00019</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>VENGO DEL PLACARD DE OTRO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_8.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00020</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>SISTERS</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_9.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00021</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>AGUA EN BUENOS AIRES</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_10.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00022</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>DAME UN LIMÓN</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_11.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00023</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>EL BURRITO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_12.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00024</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>15-5</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/a/Track_13.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00025</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>PAR MIL</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_1.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00026</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>EL ARRIERO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_2.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00027</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>SALIR A COMPRAR - GOL DE MUJER</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_3.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00028</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>SÁBADO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_4.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00029</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>LUCA</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_5.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00030</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>VIDA DE TOPOS</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_6.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00031</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>ALA DELTA</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_7.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00032</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>MAÑANA EN EL ABASTO</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_8.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00033</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>PEPE LUI</title>
+        <fingerprint_uri />
+        <audio_uri>divididos/vivo_aca/b/Track_9.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-03-00034</ISRC>
+        <artists>
+            <artist>Divididos</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Vivo Acá</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>CERCA &amp; EXTRAÑO</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_1.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00236</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>DE TENER</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_2.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00237</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>YA NO ME SORPRENDES</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_3.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00238</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>DRAMA</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_4.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00239</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>ODISEA</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_6.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00241</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>INOCENCIAS</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_8.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00243</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>TANTAS VECES</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_9.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00244</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>SOBRA</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_10.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00245</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>ALTAS HORAS</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_11.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00246</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>HOY NO</title>
+        <fingerprint_uri />
+        <audio_uri>entre_rios/onda/Track_12.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00235</ISRC>
+        <artists>
+            <artist>Entre Rios</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Onda</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Milagro</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_1.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00001</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Las Margaritas Mienten</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_2.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00002</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Camino de los Sueños</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_3.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00003</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Mi Religion </title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_4.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00004</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Rayo de Luz</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_5.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00005</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Fin del Mundo</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_6.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00006</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>No me Nombres</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_7.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00007</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Tu Pecado </title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_8.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00008</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Kimika</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_9.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00009</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>El BB Rocanrrol</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_10.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00010</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Esperame en el Cielo</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_11.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00011</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Corona de Flores</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_12.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00012</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+        <track id="track_id">
+        <title>Mi Religión (c/Rosario Flores)</title>
+        <fingerprint_uri />
+        <audio_uri>javier_calamaro/kimika/Track_13.mp3</audio_uri>
+        <video_uri />
+        <year /><label>Pelo Music</label>
+        <duration />
+        <number />
+        <ISRC>AR-F84-04-00122</ISRC>
+        <artists>
+            <artist>Javier Calamaro</artist>
+        </artists>
+        <releases>
+            <release />
+        </releases>
+        <genres>
+            <genre />
+        </genres>
+        <extras>
+            <extra name="album title">Kimika</extra>
+        </extras>
+        </track>
+    </tracks>
+</ingestion>
